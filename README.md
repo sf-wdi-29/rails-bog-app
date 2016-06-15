@@ -189,8 +189,9 @@ Back in Atom, add some seed data to `db/seeds.rb`:
 # db/seeds.rb
 #
 
-Creature.create({name: "Gollum", description: "originally known as Sméagol, was at first a Stoor, one of the three early Hobbit-types. Deformed and twisted in body and mind by the corruption of the Ring, his chief desire was to possess the very Ring that had enslaved him."})
-Creature.create({name: "Swamp Thing", description: "A humanoid mass of vegetable matter who fights to protect his swamp home, the environment in general, and humanity from various supernatural or terrorist threats."})
+Creature.create([{name: "Gollum", description: "originally known as Sméagol, was at first a Stoor, one of the three early Hobbit-types. Deformed and twisted in body and mind by the corruption of the Ring, his chief desire was to possess the very Ring that had enslaved him."},
+{name: "Swamp Thing", description: "A humanoid mass of vegetable matter who fights to protect his swamp home, the environment in general, and humanity from various supernatural or terrorist threats."}
+])
 ```
 
 In the Terminal (not inside rails console!), run `rake db:seed`. Note that the seeds file will also run every time you run `rake db:reset` to reset your database.
